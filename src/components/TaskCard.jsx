@@ -12,11 +12,12 @@ const TaskCard = ({ task }) => {
         
         
         </div>
-        <div className="task-body">
-            <p className="task-description">{task.description}</p>
-            <p>Status: {task.status}</p>
+        <div className="task-body flex flex-col items-center gap-2 p-4">
+            <img className="task-image w-40 h-40 object-cover rounded-lg" src={task.image} alt={task.title} />
+            <p className="task-description font-sans text-gray-600 text-sm">{task.description}</p>
+            <p className="task-status font-medium font-sans text-blue-900 text-xs">Status: {task.status}</p>
         </div>
-        <div className="task-footer">
+        <div className="task-footer border-t border-black p-4 flex flex-col items-center ">
             <p>Due Date: {task.dueDateTime}</p>
 
         </div>
