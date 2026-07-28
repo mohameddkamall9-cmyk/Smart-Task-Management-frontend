@@ -6,6 +6,7 @@ import './App.css'
 import TaskCard from './components/TaskCard'
 import Mainlanding from './components/Mainlanding'
 import taskP from './assets/taskP.avif'
+import Navbar from './components/Navbar'
 function App() {
   const exampleTask = {
     title: 'clean the house',
@@ -18,7 +19,7 @@ function App() {
   }
   return (
     <>
-      <Mainlanding />
+      <Navbar />
     </>
   )
 }
