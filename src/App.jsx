@@ -2,11 +2,13 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
-import './App.css'
+
 import TaskCard from './components/TaskCard'
 import Mainlanding from './components/Mainlanding'
 import taskP from './assets/taskP.avif'
 import Navbar from './components/Navbar'
+import TaskList from './components/TaskList'
+import Home from './pages/Home'
 function App() {
   const exampleTask = {
     title: 'clean the house',
@@ -19,7 +21,7 @@ function App() {
   }
   return (
     <>
-      <Navbar />
+    <Home HomeObj={exampleTask}/>
     </>
   )
 }
