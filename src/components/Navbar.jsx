@@ -2,6 +2,7 @@ import { Result } from 'postcss';
 import logo from '../assets/logo.png';
 import {useState} from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isopen , setopen] = useState(false);
@@ -26,9 +27,9 @@ const Navbar = () => {
         </div>
         <div className="navbar-links hidden sm:flex  ">
             <ul className="flex flex-row gap-4  text-lg font-semibold text-slate-100 ">
-                <li className="hover:text-green-300 transition duration-300"><a href="">Home</a></li>
-                <li className="hover:text-green-300 transition duration-300"><a href="">About</a></li>
-                <li className="hover:text-green-300 transition duration-300"><a href="">Contact</a></li>
+                <li className="hover:text-green-300 transition duration-300"><Link to="/">Home</Link></li>
+                <li className="hover:text-green-300 transition duration-300"><Link to="/about">About</Link></li>
+                <li className="hover:text-green-300 transition duration-300"><Link to="/contact">Contact</Link></li>
             </ul>
         </div>
         <div className="navbar-menu-button flex flex-row gap-4 ">
@@ -37,7 +38,7 @@ const Navbar = () => {
         ) : (
             <FiMenu className="navbar-menu-icon w-12 h-12 cursor-pointer sm:hidden" onClick={Menuchanger} />
         )}
-                <button className="navbar-button bg-yellow-400 text-black font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-yellow-500 transition duration-300"><a></a>Sign Up/login</button>
+                <button className="navbar-button bg-yellow-400 text-black font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-yellow-500 transition duration-300"><Link to="/login">Sign Up/Login</Link></button>
         </div>
         {isopen ? (<div className="nav-window bg-emerald-500 absolute top-full left-0 w-full rounded-b-2xl shadow-md sm:hidden">
             <div className="navbar-links  ">

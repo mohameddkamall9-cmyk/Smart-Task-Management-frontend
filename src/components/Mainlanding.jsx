@@ -1,5 +1,6 @@
 
 import background from '../assets/background.avif'
+import { Link } from 'react-router-dom'
 const  Mainlanding = () => { 
     return (
         <section className="main-landing  ">
@@ -14,8 +15,8 @@ const  Mainlanding = () => {
             </div>
         
             <div className="action-buttons flex flex-row gap-4 mt-4 justify-center">
-                <button className="b1  bg-green-200  rounded-2xl p-4 hover:bg-green-300 cursor-pointer trans font-semibold shadow-md transition-all"> get started for Free</button>
-                <button className="b2 bg-green-200  rounded-2xl p-4 hover:bg-green-300 cursor-pointer trans font-semibold shadow-md  transition-all"> our features</button>
+                <Link to="/features" className="b2 bg-green-200  rounded-2xl p-4 hover:bg-green-300 cursor-pointer trans font-semibold shadow-md  transition-all">our features </Link>
+                <Link to="/login" className="b2 bg-green-200  rounded-2xl p-4 hover:bg-green-300 cursor-pointer trans font-semibold shadow-md  transition-all">get started for free </Link>
 
             </div>
         </section>

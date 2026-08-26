@@ -9,6 +9,10 @@ import taskP from './assets/taskP.avif'
 import Navbar from './components/Navbar'
 import TaskList from './components/TaskList'
 import Home from './pages/Home'
+import Login from './pages/Login'
+import { Routes, Route } from 'react-router-dom'
+import Features from './pages/Features'
+
 function App() {
   const exampleTask = {
     title: 'clean the house',
@@ -21,7 +25,13 @@ function App() {
   }
   return (
     <>
-    <Home HomeObj={exampleTask}/>
+    <Routes>
+      <Route path="/" element={<Home HomeObj={exampleTask} />} />
+      <Route path="/features" element={<Features />} />
+      <Route path="/login" element={<Login />} />
+
+
+    </Routes>
     </>
   )
 }
